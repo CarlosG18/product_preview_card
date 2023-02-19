@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+:root{
+  /*cores primarias*/
+  --Dark_cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  /*cores neutras*/
+  --Very_dark_blue: hsl(212, 21%, 14%);
+  --Dark_grayish_blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  /*tipografia*/
+  --font1: 'Montserrat', sans-serif;
+  --font2: 'Fraunces', serif;
+}
+
+body{
+  height: 100vh;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Cream);
+  font-family: var(--font1);
+}
+
+.card{
+  display: flex;
+  max-width: 500px;
+  background-color: var(--White);
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 10px #00000036;
+}
+
+.img-desktop{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.content{
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.title{
+  margin-bottom: 15px;
+}
+
+.title > p{
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--Dark_grayish_blue);
+  letter-spacing: 4px;
+}
+
+.title > h1{
+  font-family: var(--font2);
+  font-weight: 700;
+}
+
+.text > p{
+  color: var(--Dark_grayish_blue);
+}
+
+.prices{
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.destaque{
+  font-size: 25px;
+  font-family: var(--font2);
+  margin-right: 15px;
+  color: var(--Dark_cyan);
+}
+
+.risco{
+  text-decoration: line-through;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dark_cyan);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-weight: 700;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+button > p{
+  margin-left: 10px;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+.img-mobile{
+  display: none;
+}
+
+@media (max-width: 375px){
+  
+  .card{
+    margin-top: 50px;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .content{
+    max-width: none;
+    padding: 20px;
+  }
+  
+  .img-desktop{
+    display: none;
+  }
+  
+  .img-mobile{
+    border-radius: 15px 15px 0px 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
